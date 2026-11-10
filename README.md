@@ -1,72 +1,58 @@
-![Github Forks](https://img.shields.io/github/forks/Yixin0313/personal-homepage-template?style=flat)
-![Github Stars](https://img.shields.io/github/stars/Yixin0313/personal-homepage-template?style=flat)
-![License](https://img.shields.io/github/license/Yixin0313/personal-homepage-template)
+# Shenghao Wang's Homepage
 
-# 通用个人主页模板：适用于学术和求职场景 | A general-purpose template: suitable for both academic and professional use.
+个人学术主页，基于 [Yixin0313/personal-homepage-template](https://github.com/Yixin0313/personal-homepage-template) 修改，支持中英文切换。
 
-## 预览 | Preview
-[![Screenshot of the Website](https://raw.githubusercontent.com/Yixin0313/personal-homepage-template/main/screenshot_full.png)](https://yixin0313.github.io/personal-homepage-template/)
+网址：<https://EvanPKing.github.io/>
 
-## 介绍 | Introduction
+## 本地预览
 
-这是一个**通用的个人主页模板**，基于 [Sen Li 的学术主页模板](https://github.com/senli1073/senli1073.github.io) 进行修改。  
+在仓库根目录运行：
 
-我新增了**工作经历板块**，使其更加适用于程序员和求职者。并且使用了中英文对照版本。
-
-This is a **general-purpose personal website template**, modified from [Sen Li's academic template](https://github.com/senli1073/senli1073.github.io).  
-
-I have added a **work experience section**, making it more practical for programmers and job seekers.
-
-Bilibili教程视频：【【2025最新保姆级教程】手把手教你用github制作个人主页（申学找工作必备）】https://www.bilibili.com/video/BV16nNMeFEzm?vd_source=79b688b1a191b9f9e8204aa1c3d0adab
-
-CSDN教程：https://blog.csdn.net/qq_45743991/article/details/145505150?spm=1001.2014.3001.5502
-
-## 快速开始 | Getting Start
-### 1. Fork 该仓库 | Fork this repository
-仓库名称应命名为 `<用户名>.github.io`，这样你的个人网站地址将是 `https://<用户名>.github.io/`。
-
-The repository name should be `<username>.github.io`, which will also be your website's URL.
-
-
-### 2.  编辑页面内容 | Edit page content
-(1) 进入你想存放项目的文件夹，并克隆新的仓库 | Go to the folder where you want to store your project, and clone the new repository:
+```bash
+python -m http.server 8000
 ```
-git clone https://github.com/<username>/<username>.github.io.git
-```
-项目的目录结构如下 | The directory structure is as follows:
 
-```.
+然后打开 <http://localhost:8000>。
+
+> 必须通过本地服务器打开。直接双击 `index.html` 时，浏览器会因安全策略拒绝读取 `contents/` 下的文件，页面会是空白。
+
+## 目录结构
+
+```
 .
 ├── contents
-└── static
-    ├── assets
-    │   └── img
-    ├── css
-    └── js
+│   ├── config.en.yml / config.zh.yml   # 标题、左上角名字、首页大标语、副标题、版权
+│   ├── home.en.md / home.zh.md         # 简介、邮箱、教育背景、研究兴趣、最新动态
+│   ├── awards.en.md / awards.zh.md     # 荣誉奖项
+│   ├── experience.en.md / experience.zh.md  # 实习与项目经历
+│   └── publications.en.md / publications.zh.md  # 论文发表
+├── static
+│   ├── assets
+│   │   └── img
+│   │       ├── background.jpeg         # 顶部背景图（建议 1920×400 以上）
+│   │       └── photo.png               # 头像（正方形，建议 1000×1000）
+│   ├── css
+│   └── js
+└── index.html
 ```
 
-(2) 修改各个板块的内容 | Modify the content of each section, which corresponds to `contents/*.md`.
+## 修改内容
 
-(3) 调整网站设置 | Adjust the title, copyright information, and other text of the website in `contents/config.yml`
+- 英文内容改 `contents/*.en.md`，中文内容改 `contents/*.zh.md`，两者独立。
+- 站点标题、标语、版权在 `contents/config.en.yml` 和 `config.zh.yml` 中修改。
+- 替换图片时保持文件名不变即可：`static/assets/img/background.jpeg`、`photo.png`。
+- 新增内容板块时，需要同时修改三处：`index.html` 中的 `<section>`、`static/js/scripts.js` 中的 `section_names`、以及 `translations` 里的导航与标题文字。
 
-(4) 替换图片 | Replace background image and photo with new ones for your web pages in `static/assets/img/`
+## 语言切换
 
-(5) 提交更改 | Push it: 
-```
-git commit -am 'init'
-git push
-```
+导航栏右上角的「中文 / EN」按钮用于切换语言，选择会保存在浏览器 `localStorage` 中，下次访问自动沿用。
 
+若某种语言的某个文件不存在，页面会自动回退到对应的英文文件。
 
-### 3. 访问你的网站 | Enjoy
+## 部署
 
-打开浏览器，访问 https://<用户名>.github.io，即可查看你的个人主页
+仓库需命名为 `<用户名>.github.io`。在 GitHub 仓库的 **Settings → Pages** 中，将 Source 设为 `main` 分支并保存，几分钟后即可通过 <https://EvanPKing.github.io/> 访问。
 
-Fire up a browser and go to `https://<username>.github.io`
+## Credit & License
 
-
-
-## License
-本项目基于 MIT 许可协议，你可以自由使用和修改此模板。 Yixin Huang 2025年2月7号
-
-Copyright Yixin Huang, 2025. Licensed under an MIT license. You can copy and mess with this template.
+模板来自 [Yixin0313/personal-homepage-template](https://github.com/Yixin0313/personal-homepage-template)，其基于 [Sen Li 的学术主页模板](https://github.com/senli1073/senli1073.github.io) 修改。本项目遵循 MIT 许可协议，详见 [LICENSE](LICENSE)。
