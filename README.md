@@ -30,7 +30,7 @@ python -m http.server 8000
 │   ├── assets
 │   │   └── img
 │   │       ├── background.jpeg         # 顶部背景图（建议 1920×400 以上）
-│   │       └── photo.png               # 头像（正方形，建议 1000×1000）
+│   │       └── photo.jpg               # 头像（原图比例即可）
 │   ├── css
 │   └── js
 └── index.html
@@ -40,7 +40,7 @@ python -m http.server 8000
 
 - 英文内容改 `contents/*.en.md`，中文内容改 `contents/*.zh.md`，两者独立。
 - 站点标题、标语、版权在 `contents/config.en.yml` 和 `config.zh.yml` 中修改。
-- 替换图片时保持文件名不变即可：`static/assets/img/background.jpeg`、`photo.png`。
+- 替换图片时保持文件名不变即可：`static/assets/img/background.jpeg`、`photo.jpg`。
 - 新增内容板块时，需要同时修改三处：`index.html` 中的 `<section>`、`static/js/scripts.js` 中的 `section_names`、以及 `translations` 里的导航与标题文字。
 
 ## 语言切换
