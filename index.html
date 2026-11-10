@@ -1,192 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Academic homepage of Shenghao Wang" />
     <meta name="author" content="Shenghao Wang" />
     <title id="title"></title>
 
-    <!-- Icon -->
-    <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico?v=20261110" />
+    <!-- Apply the saved theme before first paint to avoid a flash -->
+    <script>
+        (function () {
+            var theme = 'dark';
+            try {
+                var fromUrl = new URLSearchParams(window.location.search).get('theme');
+                var stored = localStorage.getItem('homepage-theme');
+                if (fromUrl === 'light' || fromUrl === 'dark') theme = fromUrl;
+                else if (stored === 'light') theme = 'light';
+            } catch (e) { }
+            document.documentElement.dataset.theme = theme;
+        })();
+    </script>
 
-    <!-- Bootstrap icons-->
+    <!-- Icon -->
+    <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico?v=20261111" />
+
+    <!-- Bootstrap icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Google fonts-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap"
-        rel="stylesheet" />
+    <!-- Site styles -->
+    <link type="text/css" href="static/css/styles.css?v=20261111" rel="stylesheet" />
+    <link type="text/css" href="static/css/main.css?v=20261111" rel="stylesheet" />
+</head>
 
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link type="text/css" href="static/css/styles.css?v=20261110" rel="stylesheet" />
-    <link type="text/css" href="static/css/main.css?v=20261110" rel="stylesheet" />
+<body>
+    <header class="site-header">
+        <div class="nav-inner">
+            <a class="nav-brand" href="#home">Shenghao Wang</a>
+            <nav class="nav-links" id="site-nav">
+                <a class="nav-link" href="#home" data-i18n="nav.home">Homepage</a>
+                <a class="nav-link" href="#awards" data-i18n="nav.awards">Honors</a>
+                <a class="nav-link" href="#experience" data-i18n="nav.experience">Experience</a>
+                <a class="nav-link" href="#publications" data-i18n="nav.publications">Publications</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="lang-toggle" class="icon-btn lang-btn" type="button"
+                    aria-label="切换到中文">中文</button>
+                <button id="theme-toggle" class="icon-btn" type="button"
+                    aria-label="Toggle theme"><i class="bi bi-sun-fill"></i></button>
+            </div>
+        </div>
+    </header>
 
-    <!-- Bootstrap core JS-->
-    <script type="text/javascript" src="static/js/bootstrap.bundle.min.js?v=20261110"></script>
+    <div class="layout">
+        <aside class="sidebar">
+            <img class="avatar" src="static/assets/img/photo.jpg?v=20261111"
+                alt="Portrait of Shenghao Wang" />
+            <h1 class="sidebar-name" id="sidebar-name"></h1>
+            <p class="sidebar-role" id="sidebar-role"></p>
+            <ul class="profile-meta">
+                <li><i class="bi bi-geo-alt-fill"></i><span id="sidebar-location"></span></li>
+                <li><i class="bi bi-building"></i><span id="sidebar-affiliation"></span></li>
+                <li><i class="bi bi-envelope-fill"></i><a id="email-href" href="mailto:"><span
+                            id="sidebar-email"></span></a></li>
+                <li><i class="bi bi-google"></i><a id="scholar-href" href="#">Google Scholar</a></li>
+                <li><i class="bi bi-github"></i><a id="github-href" href="#">GitHub</a></li>
+                <li><i class="bi bi-linkedin"></i><a id="linkedin-href" href="#">LinkedIn</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <section id="home">
+                <h2 class="page-title" id="content-name"></h2>
+                <div id="home-md" class="md"></div>
+            </section>
+
+            <section id="awards">
+                <h2 class="section-title"><i class="bi bi-trophy-fill"></i><span
+                        data-i18n="section.awards">Honors</span></h2>
+                <div id="awards-md" class="md"></div>
+            </section>
+
+            <section id="experience">
+                <h2 class="section-title"><i class="bi bi-briefcase-fill"></i><span
+                        data-i18n="section.experience">Experience</span></h2>
+                <div id="experience-md" class="md"></div>
+            </section>
+
+            <section id="publications">
+                <h2 class="section-title"><i class="bi bi-file-text-fill"></i><span
+                        data-i18n="section.publications">Publications</span></h2>
+                <div id="publications-md" class="md"></div>
+            </section>
+
+            <footer class="site-footer">
+                <span id="copyright-text"></span>
+                <span class="sep">&middot;</span>
+                <a href="https://github.com/EvanPKing">GitHub</a>
+                <span class="sep">&middot;</span>
+                <a href="https://github.com/EvanPKing/EvanPKing.github.io/blob/main/LICENSE">License</a>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Bootstrap core JS -->
+    <script type="text/javascript" src="static/js/bootstrap.bundle.min.js?v=20261111"></script>
 
     <!-- Markdown -->
-    <script type="text/javascript" src="static/js/marked.min.js?v=20261110"></script>
+    <script type="text/javascript" src="static/js/marked.min.js?v=20261111"></script>
+    <script type="text/javascript" src="static/js/js-yaml.min.js?v=20261111"></script>
 
     <!-- Mathematics -->
     <script>
-        // See https://docs.mathjax.org/en/latest/index.html for more details.
         MathJax = {
             tex: {
-                packages: {},              // extensions to use
-                inlineMath: [              // start/end delimiter pairs for in-line math
-                    ['$', '$'],
-                    ['\\(', '\\)']
-                ],
-                displayMath: [             // start/end delimiter pairs for display math
-                    ['$$', '$$'],
-                    ['\\[', '\\]']
-                ],
-                processEscapes: false,      // use \$ to produce a literal dollar sign
-                processEnvironments: true, // process \begin{xxx}...\end{xxx} outside math mode
-                processRefs: true,         // process \ref{...} outside of math mode
-                digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,    // pattern for recognizing numbers
-                tags: 'all',              // or 'ams' or 'all'
-                tagSide: 'right',          // side for \tag macros
-                tagIndent: '0.8em',        // amount to indent tags
-                useLabelIds: true,         // use label name rather than tag for ids
-                maxMacros: 10000,          // maximum number of macro substitutions per expression
-                maxBuffer: 5 * 1024,       // maximum size for the internal TeX string (5K)
-                // baseURL:                   // URL for use with links to tags (when there is a <base> tag in effect)
-                // (document.getElementsByTagName('base').length === 0) ? '' : String(document.location).replace(/#.*$/, ''),
-                formatError:               // function called when TeX syntax errors occur
-                    (jax, err) => jax.formatError(err)
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: false,
+                processEnvironments: true
             }
         };
     </script>
     <script type="text/javascript" id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-    <!-- Core JS-->
-    <script type="text/javascript" src="static/js/scripts.js?v=20261110"></script>
-    <script type="text/javascript" src="static/js/js-yaml.min.js?v=20261110"></script>
-
-</head>
-
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
-        <div class="container px-5">
-            <a id="page-top-title" class="navbar-brand fw-bold" href="#page-top"></a>
-            <!-- <a href="#page-top"><img src="static/assets/img/CUMT_LOGO.svg" style="width: 11rem;"></a> -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                MENU
-                <i class="bi-list"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#home"><span data-i18n="nav.home">HOME</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#awards"><span data-i18n="nav.awards">AWARDS</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#experience"><span data-i18n="nav.experience">EXPERIENCE</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#publications"><span data-i18n="nav.publications">PUBLICATIONS</span></a>
-                    </li>
-                </ul>
-            </div>
-            <button id="lang-toggle" class="btn lang-toggle ms-2" type="button"
-                aria-label="切换到中文">中文</button>
-        </div>
-    </nav>
-
-    <!-- Top Section -->
-    <section class="top-section" style="background-image: url('static/assets/img/background.jpeg');">
-        <div class="top-section-content">
-            <div class="container px-5">
-                <h2 id="top-section-bg-text" class="text-white display-3 lh-1 font-alt"></h2>
-            </div>
-        </div>
-    </section>
-    <!-- Top Section -->
-
-    <!-- Photo -->
-    <div class="container px-5">
-        <div id="avatar">
-            <img class="shadow" src="static/assets/img/photo.jpg?v=20261110-original">
-        </div>
-    </div>
-    <!-- Photo -->
-
-    <!-- Home -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="home">
-        <div class="container px-5">
-            <header>
-                <h2 id="home-subtitle"> </h2>
-                <!-- <span class="bi bi-list"></span> -->
-            </header>
-            <div class="main-body" id="home-md"></div>
-        </div>
-    </section>
-    <!-- Home -->
-
-    <!-- Awards -->
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="awards">
-        <div class="container px-5">
-            <header>
-                <h2 id="awards-subtitle"><i class="bi bi-award-fill"></i>&nbsp;<span
-                        data-i18n="section.awards">AWARDS</span></h2>
-            </header>
-            <div class="main-body" id="awards-md"></div>
-
-        </div>
-    </section>
-    <!-- Awards -->
-
-    <!-- Experience -->
-    <section class="bg-gradient-primary-to-secondary-dark mt5 md5" id="experience">
-        <div class="container px-5">
-            <header>
-                <h2 id="experience-subtitle"><i class="bi bi-briefcase-fill"></i>&nbsp;<span
-                        data-i18n="section.experience">EXPERIENCE</span></h2>
-            </header>
-            <div class="main-body" id="experience-md"></div>
-        </div>
-    </section>
-    <!-- Experience -->
-
-    <!-- Publications -->
-    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="publications">
-        <div class="container px-5">
-            <header>
-                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;<span
-                        data-i18n="section.publications">PUBLICATIONS</span></h2>
-            </header>
-            <div class="main-body" id="publications-md"></div>
-
-        </div>
-    </section>
-    <!-- Publications  -->
-
-    <!-- Footer-->
-    <footer class="bg-bottom text-center py-5">
-        <div class="container px-5">
-            <div class="text-white-50 small">
-                <div id="copyright-text" class="mb-2"></div>
-                <a id="github-link" href="https://github.com/EvanPKing">GitHub</a>
-                <span class="mx-1">&middot;</span>
-                <a id="license-link"
-                    href="https://github.com/EvanPKing/EvanPKing.github.io/blob/main/LICENSE">License</a>
-            </div>
-        </div>
-    </footer>
-
+    <!-- Site scripts -->
+    <script type="text/javascript" src="static/js/scripts.js?v=20261111"></script>
 </body>
 
 </html>

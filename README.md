@@ -1,6 +1,8 @@
 # Shenghao Wang's Homepage
 
-个人学术主页，基于 [Yixin0313/personal-homepage-template](https://github.com/Yixin0313/personal-homepage-template) 修改，支持中英文切换。
+个人学术主页，基于 [Yixin0313/personal-homepage-template](https://github.com/Yixin0313/personal-homepage-template) 修改。
+
+布局为「顶部导航 + 左侧固定个人资料栏 + 右侧内容区」，支持深色/浅色主题和中英文切换。
 
 网址：<https://EvanPKing.github.io/>
 
@@ -21,16 +23,16 @@ python -m http.server 8000
 ```
 .
 ├── contents
-│   ├── config.en.yml / config.zh.yml   # 标题、左上角名字、首页大标语、副标题、版权
-│   ├── home.en.md / home.zh.md         # 简介、邮箱、教育背景、研究兴趣、最新动态
+│   ├── config.en.yml / config.zh.yml   # 站点标题、侧栏姓名与身份、联系方式链接、版权
+│   ├── home.en.md / home.zh.md         # 简介、教育背景、研究兴趣、最新动态
 │   ├── awards.en.md / awards.zh.md     # 荣誉奖项
 │   ├── experience.en.md / experience.zh.md  # 实习与项目经历
 │   └── publications.en.md / publications.zh.md  # 论文发表
 ├── static
 │   ├── assets
 │   │   └── img
-│   │       ├── background.jpeg         # 顶部背景图（建议 1920×400 以上）
-│   │       └── photo.jpg               # 头像（原图比例即可）
+│   │       ├── photo.jpg               # 头像（原图即可，页面里按圆形裁剪显示）
+│   │       └── background.jpeg         # 旧版顶部背景图，当前布局不再使用
 │   ├── css
 │   └── js
 └── index.html
@@ -39,13 +41,20 @@ python -m http.server 8000
 ## 修改内容
 
 - 英文内容改 `contents/*.en.md`，中文内容改 `contents/*.zh.md`，两者独立。
-- 站点标题、标语、版权在 `contents/config.en.yml` 和 `config.zh.yml` 中修改。
-- 替换图片时保持文件名不变即可：`static/assets/img/background.jpeg`、`photo.jpg`。
+- 站点标题、侧栏姓名/身份/所在地/单位、各社交链接和版权在 `contents/config.en.yml` 和 `config.zh.yml` 中修改：
+  - 普通键（如 `sidebar-name`、`sidebar-role`）写入页面文字；
+  - 以 `-href` 结尾的键（如 `email-href`、`github-href`）设置链接地址。
+- 替换头像时保持文件名不变即可：`static/assets/img/photo.jpg`。
 - 新增内容板块时，需要同时修改三处：`index.html` 中的 `<section>`、`static/js/scripts.js` 中的 `section_names`、以及 `translations` 里的导航与标题文字。
 
-## 语言切换
+## 语言与主题切换
 
-导航栏右上角的「中文 / EN」按钮用于切换语言，选择会保存在浏览器 `localStorage` 中，下次访问自动沿用。
+导航栏右上角有两个按钮：
+
+- 「中文 / EN」切换语言，选择保存在 `localStorage`（`homepage-lang`）中，下次访问自动沿用；
+- 太阳/月亮图标切换深色（默认）/浅色主题，选择保存在 `homepage-theme` 中。
+
+也可以用链接参数直接分享指定状态，例如 `https://EvanPKing.github.io/?lang=zh&theme=light`。手动点击切换后，参数会从地址栏中移除。
 
 若某种语言的某个文件不存在，页面会自动回退到对应的英文文件。
 
