@@ -1,5 +1,2 @@
-- **Undergraduate Scholarship**, XX Foundation, 2026.
-
-- **Dean's List**, The Hong Kong University of Science and Technology, 2025.
-
-- **Second Prize**, XX Programming Contest, 2025.
+- **Dean's List, School of Science**, The Hong Kong University of Science and Technology, Fall 2025.
+- **Dean's List, School of Science**, The Hong Kong University of Science and Technology, Spring 2026.
