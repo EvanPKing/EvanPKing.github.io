@@ -1,2 +1,3 @@
+- **HKUST Full Tuition Admission Scholarship**, The Hong Kong University of Science and Technology, Sep 2025. Awarded to international students with A* in 4 or more Advanced Level subjects; renewable every semester with CGA > 3.0.
 - **Dean's List, School of Science**, The Hong Kong University of Science and Technology, Fall 2025.
 - **Dean's List, School of Science**, The Hong Kong University of Science and Technology, Spring 2026.
