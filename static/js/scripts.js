@@ -1,5 +1,5 @@
 const content_dir = 'contents/'
-const section_names = ['home', 'awards', 'experience', 'publications']
+const section_names = ['home', 'awards', 'experience', 'projects', 'publications']
 const LANG_STORAGE_KEY = 'homepage-lang'
 const THEME_STORAGE_KEY = 'homepage-theme'
 const DEFAULT_LANG = 'en'
@@ -8,16 +8,16 @@ const DEFAULT_THEME = 'dark'
 // Text that lives in index.html rather than in contents/*.md
 const translations = {
     en: {
-        nav: { home: 'Homepage', awards: 'Honors', experience: 'Experience', publications: 'Publications' },
-        section: { awards: 'Honors', experience: 'Experience', publications: 'Publications' },
+        nav: { home: 'Homepage', awards: 'Honors', experience: 'Experience', projects: 'Projects', publications: 'Publications' },
+        section: { awards: 'Honors', experience: 'Experience', projects: 'Projects', publications: 'Publications' },
         switchLabel: '中文',
         switchTitle: '切换到中文',
         themeLight: 'Switch to light mode',
         themeDark: 'Switch to dark mode'
     },
     zh: {
-        nav: { home: '首页', awards: '荣誉', experience: '经历', publications: '论文' },
-        section: { awards: '荣誉奖项', experience: '实习与项目', publications: '论文发表' },
+        nav: { home: '首页', awards: '荣誉', experience: '经历', projects: '项目', publications: '论文' },
+        section: { awards: '荣誉奖项', experience: '工作经历', projects: '项目经历', publications: '论文发表' },
         switchLabel: 'EN',
         switchTitle: 'Switch to English',
         themeLight: '切换到浅色模式',

@@ -370,12 +370,17 @@ section + section {
         width: 100%;
         margin: 0;
         padding-bottom: 0.1rem;
-        gap: 1.25rem;
+        gap: 0.9rem;
         overflow-x: auto;
     }
 
     .nav-links .nav-link {
         white-space: nowrap;
+    }
+
+    /* The brand already links home; dropping it keeps all section links visible */
+    .nav-links .nav-link[href="#home"] {
+        display: none;
     }
 
     .layout {

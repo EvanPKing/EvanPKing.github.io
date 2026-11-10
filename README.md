@@ -26,7 +26,8 @@ python -m http.server 8000
 │   ├── config.en.yml / config.zh.yml   # 站点标题、侧栏姓名与身份、联系方式链接、版权
 │   ├── home.en.md / home.zh.md         # 简介、教育背景、研究兴趣、最新动态
 │   ├── awards.en.md / awards.zh.md     # 荣誉奖项
-│   ├── experience.en.md / experience.zh.md  # 实习与项目经历
+│   ├── experience.en.md / experience.zh.md  # 工作经历
+│   ├── projects.en.md / projects.zh.md      # 项目经历
 │   └── publications.en.md / publications.zh.md  # 论文发表
 ├── static
 │   ├── assets
