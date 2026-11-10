@@ -63,7 +63,7 @@ function applyStaticText(lang) {
 
 async function loadConfig(lang, token) {
     try {
-        const response = await fetch(`${content_dir}config.${lang}.yml`)
+        const response = await fetch(`${content_dir}config.${lang}.yml`, { cache: 'no-cache' })
         if (!response.ok) throw new Error(`config.${lang}.yml: ${response.status}`)
         const yml = jsyaml.load(await response.text())
         if (token !== renderToken) return
@@ -82,9 +82,9 @@ async function loadConfig(lang, token) {
 
 async function fetchMarkdown(name, lang) {
     const primary = `${content_dir}${name}.${lang}.md`
-    let response = await fetch(primary)
+    let response = await fetch(primary, { cache: 'no-cache' })
     if (!response.ok && lang !== 'en') {
-        response = await fetch(`${content_dir}${name}.en.md`)
+        response = await fetch(`${content_dir}${name}.en.md`, { cache: 'no-cache' })
     }
     if (!response.ok) throw new Error(`${name}.${lang}.md: ${response.status}`)
     return response.text()
