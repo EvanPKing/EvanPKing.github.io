@@ -1,20 +1,11 @@
-### **Research Intern**
-**June 2026 – August 2026 | XX Lab, HKUST**
+### **COMP1023 Undergraduate Teaching Assistant (QSA Students)**
+**Sep 2026 – Present · Part-time · On-site | The Hong Kong University of Science and Technology, Hong Kong SAR**
 
-Worked on XX, focusing on XX. Built and evaluated XX, and contributed to an ongoing research project.
-
-#### Key Contributions
-- Implemented XX and improved XX by XX%.
-- Designed experiments to study XX and analyzed the results.
-- Collaborated with graduate students on XX.
+Support QSA students taking COMP1023 through tutorials, office hours, and feedback on coursework.
 
 ---
 
-### **Software Engineering Intern**
-**June 2025 – August 2025 | XX Company**
+### **Undergraduate Researcher in Advancing LLMs for Healthcare Applications**
+**May 2026 – Present · Hybrid | The Hong Kong University of Science and Technology, Hong Kong SAR**
 
-Contributed to XX, with a focus on XX.
-
-#### Key Contributions
-- Developed XX to support XX.
-- Optimized XX, reducing latency by XX%.
+Research on advancing large language models for healthcare applications, including multimodal behaviour modeling for LLM-based virtual standardized patients.
