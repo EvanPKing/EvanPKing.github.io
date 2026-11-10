@@ -1,7 +1,2 @@
-#### Preprints & Working Papers
-- **[Paper Title]**, with XX. Manuscript in preparation, 2026.
-
 #### Conference Papers
-- **[Paper Title]**, XX, XX. *XX Conference*, 2026.
-
-*This section is a placeholder. Replace it with your own publications, or remove entries you do not have yet.*
+- **Multimodal Behaviour Modeling for LLM-based Virtual Standardized Patients**, Lefang Fan, Yuxiang Nie, Qibo Yuan, **Shenghao Wang**, Hao Chen. *ICLR 2027 (under review)*, 2026.

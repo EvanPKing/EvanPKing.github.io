@@ -1,7 +1,2 @@
-#### 预印本与在研论文
-- **[论文标题]**，与 XX 合作。论文撰写中，2026。
-
 #### 会议论文
-- **[论文标题]**，XX，XX。*XX 会议*，2026。
-
-*此板块为占位内容。请替换为你自己的论文，或删除暂时没有的条目。*
+- **Multimodal Behaviour Modeling for LLM-based Virtual Standardized Patients（基于大语言模型的虚拟标准化病人多模态行为建模）**，Lefang Fan, Yuxiang Nie, Qibo Yuan, **Shenghao Wang**, Hao Chen。*ICLR 2027（审稿中）*，2026。
