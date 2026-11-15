@@ -2,8 +2,8 @@ I am an undergraduate student at **The Hong Kong University of Science and Techn
 
 #### Education
 **The Hong Kong University of Science and Technology**  
-BSc in XX, 2025 – 2029  
-• GPA: XX / 4.3
+BSc in Data Science and Technology, 2025 – 2029  
+• CGA: 3.91 / 4.3
 
 #### Research Interests
 Machine Learning &nbsp;·&nbsp; Large Language Models &nbsp;·&nbsp; AI Agents &nbsp;·&nbsp; Trustworthy AI

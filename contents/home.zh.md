@@ -2,8 +2,8 @@
 
 #### 教育背景
 **香港科技大学**  
-XX 专业 本科，2025 – 2029  
-• GPA：XX / 4.3
+数据科学与技术（Data Science and Technology）本科，2025 – 2029  
+• CGA：3.91 / 4.3
 
 #### 研究兴趣
 机器学习 &nbsp;·&nbsp; 大语言模型 &nbsp;·&nbsp; AI 智能体 &nbsp;·&nbsp; 可信人工智能
