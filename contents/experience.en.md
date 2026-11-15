@@ -1,7 +1,7 @@
-### **COMP1023 Undergraduate Teaching Assistant (QSA Students)**
+### **COMP1023 Undergraduate Teaching Assistant for Quantitative Social Analysis Students**
 **Sep 2026 – Present · Part-time · On-site | The Hong Kong University of Science and Technology, Hong Kong SAR**
 
-Support QSA students taking COMP1023 through tutorials, office hours, and feedback on coursework.
+Support Quantitative Social Analysis (QSA) students taking COMP1023 through tutorials, office hours, and feedback on coursework.
 
 ---
 
